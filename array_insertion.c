@@ -3,7 +3,7 @@
 
 void insert(int arr[] , int pos , int num , int size)
 {  
-    int newarr[size+1];
+    int *newarr = (int*)malloc((size+1)*sizeof(int));
    if(pos>0 && pos<=size)
    { 
     for(int j = 0;j<pos;j++)

@@ -3,7 +3,7 @@
 
 void del(int arr[], int pos , int size)
 {
-    int newarr[size-1];
+    int *newarr = (int*)malloc((size-1)*sizeof(int));
     for(int i=0;i<pos;i++)
     {
         newarr[i] = arr[i];
@@ -16,6 +16,7 @@ void del(int arr[], int pos , int size)
     {
         arr[i] = newarr[i];
     }
+    free(newarr);
 }
 
 int main(void)
